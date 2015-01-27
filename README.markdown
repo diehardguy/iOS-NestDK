@@ -1,9 +1,9 @@
 # Nest for iOS
 
 Sample iOS app demonstrating Nest Developer auth and simple thermostat control. You'll need a Nest Developer account to run this sample code. (see https://developer.nest.com)
+* In https://developer.nest.com/ register a client and specify the Redirect URI as http://localhost:8080/auth/nest/callback 
 
 ## Building
-
 * In `Constants.m`, replace the placeholder strings for `NestClientID`, `RedirectURL`, and `NestClientSecret` with your Nest Developer credentials. (see https://developer.nest.com).
 * In Xcode select Product --> Build.
 
