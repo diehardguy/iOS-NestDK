@@ -27,6 +27,6 @@ NSString * const NestCurrentAPIDomain = @"home.nest.com";
 
 NSString * const NestState = @"SOMESTATE";
 
-NSString * const RedirectURL = @"http://xxx.com";
+NSString * const RedirectURL = @"http://www.example.com";
 
 
