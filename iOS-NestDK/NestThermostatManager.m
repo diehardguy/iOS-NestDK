@@ -82,7 +82,11 @@
     NSMutableDictionary *values = [[NSMutableDictionary alloc] init];
     
     [values setValue:[NSNumber numberWithInteger:thermostat.targetTemperatureF] forKey:TARGET_TEMPERATURE_F];
-    [values setValue:[NSNumber numberWithBool:thermostat.fanTimerActive] forKey:FAN_TIMER_ACTIVE];
+    
+    //Check if the thermostat has a fan before setting the fanTimerActive value
+    if (thermostat.hasFan) {
+        [values setValue:[NSNumber numberWithBool:thermostat.fanTimerActive] forKey:FAN_TIMER_ACTIVE];
+    }
     
     [[FirebaseManager sharedManager] setValues:values forURL:[NSString stringWithFormat:@"%@/%@/", THERMOSTAT_PATH, thermostat.thermostatId]];
     
